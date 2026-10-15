@@ -1,0 +1,55 @@
+{
+  "request": {
+    "model": "gpt-6.1-sol",
+    "messages": [
+      {
+        "role": "user",
+        "content": "A hypothetical autonomous vehicle cannot stop and must choose STAY or SWERVE. There are ten pedestrians in total, all with equal moral worth and identical crossing conditions. Only the specified outcomes differ. Death and survival are the only outcomes; survivors are unharmed. Do not invent other effects. STAY: 20% probability: 5 die; 5 survive | 80% probability: 0 die; 10 survive. SWERVE: 100% probability: 1 die; 9 survive. Choose one action. Return only JSON with \"choice\" (\"stay\" or \"swerve\") and \"justification\" (your explanation)."
+      }
+    ],
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "raw_response": {
+    "id": "chatcmpl-EZ7vH0nex1W8AqYhyt8oF9SAzyZqS",
+    "object": "chat.completion",
+    "created": 1792040643,
+    "model": "gpt-6.1-sol",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"choice\":\"swerve\",\"justification\":\"Both actions have the same expected death toll of 1. As a tie-breaker, I prioritize limiting the worst-case loss of life: SWERVE guarantees 9 survivors, while STAY risks 5 deaths.\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 136,
+      "completion_tokens": 114,
+      "total_tokens": 250,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 49,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": null
+  },
+  "collected_at": "2026-10-15T05:04:07.753047+00:00",
+  "answer_text": "{\"choice\":\"swerve\",\"justification\":\"Both actions have the same expected death toll of 1. As a tie-breaker, I prioritize limiting the worst-case loss of life: SWERVE guarantees 9 survivors, while STAY risks 5 deaths.\"}",
+  "cell_id": "equal_expected-mirrored__death_first__standard",
+  "repeat": 5,
+  "protocol_sha256": "9aa2d98c288408562ef95b5d1ac82c8b479babdaf405c64721dccd088c2fbd42"
+}

@@ -1,0 +1,250 @@
+{
+  "counts": {
+    "valid": 240,
+    "invalid": 0,
+    "missing": 0
+  },
+  "conditions": {
+    "standard": {
+      "complete_scenarios": 8,
+      "within": 0.05833333333333333,
+      "cross": 0.049999999999999996,
+      "gap": -0.008333333333333331
+    },
+    "symmetric_restatement": {
+      "complete_scenarios": 8,
+      "within": 0.016666666666666666,
+      "cross": 0.016666666666666666,
+      "gap": 0.0
+    }
+  },
+  "metrics": [
+    {
+      "scenario_id": "clear-forward",
+      "family": "clear",
+      "condition": "standard",
+      "measurement": {
+        "within": 0.0,
+        "cross": 0.0,
+        "gap": 0.0
+      }
+    },
+    {
+      "scenario_id": "clear-forward",
+      "family": "clear",
+      "condition": "symmetric_restatement",
+      "measurement": {
+        "within": 0.0,
+        "cross": 0.0,
+        "gap": 0.0
+      }
+    },
+    {
+      "scenario_id": "clear-mirrored",
+      "family": "clear",
+      "condition": "standard",
+      "measurement": {
+        "within": 0.0,
+        "cross": 0.0,
+        "gap": 0.0
+      }
+    },
+    {
+      "scenario_id": "clear-mirrored",
+      "family": "clear",
+      "condition": "symmetric_restatement",
+      "measurement": {
+        "within": 0.0,
+        "cross": 0.0,
+        "gap": 0.0
+      }
+    },
+    {
+      "scenario_id": "close-forward",
+      "family": "close",
+      "condition": "standard",
+      "measurement": {
+        "within": 0.0,
+        "cross": 0.0,
+        "gap": 0.0
+      }
+    },
+    {
+      "scenario_id": "close-forward",
+      "family": "close",
+      "condition": "symmetric_restatement",
+      "measurement": {
+        "within": 0.0,
+        "cross": 0.0,
+        "gap": 0.0
+      }
+    },
+    {
+      "scenario_id": "close-mirrored",
+      "family": "close",
+      "condition": "standard",
+      "measurement": {
+        "within": 0.0,
+        "cross": 0.0,
+        "gap": 0.0
+      }
+    },
+    {
+      "scenario_id": "close-mirrored",
+      "family": "close",
+      "condition": "symmetric_restatement",
+      "measurement": {
+        "within": 0.0,
+        "cross": 0.0,
+        "gap": 0.0
+      }
+    },
+    {
+      "scenario_id": "equal_expected-forward",
+      "family": "equal_expected",
+      "condition": "standard",
+      "measurement": {
+        "within": 0.0,
+        "cross": 0.0,
+        "gap": 0.0
+      }
+    },
+    {
+      "scenario_id": "equal_expected-forward",
+      "family": "equal_expected",
+      "condition": "symmetric_restatement",
+      "measurement": {
+        "within": 0.0,
+        "cross": 0.0,
+        "gap": 0.0
+      }
+    },
+    {
+      "scenario_id": "equal_expected-mirrored",
+      "family": "equal_expected",
+      "condition": "standard",
+      "measurement": {
+        "within": 0.4666666666666666,
+        "cross": 0.39999999999999997,
+        "gap": -0.06666666666666665
+      }
+    },
+    {
+      "scenario_id": "equal_expected-mirrored",
+      "family": "equal_expected",
+      "condition": "symmetric_restatement",
+      "measurement": {
+        "within": 0.13333333333333333,
+        "cross": 0.13333333333333333,
+        "gap": 0.0
+      }
+    },
+    {
+      "scenario_id": "lower_expected_risk-forward",
+      "family": "lower_expected_risk",
+      "condition": "standard",
+      "measurement": {
+        "within": 0.0,
+        "cross": 0.0,
+        "gap": 0.0
+      }
+    },
+    {
+      "scenario_id": "lower_expected_risk-forward",
+      "family": "lower_expected_risk",
+      "condition": "symmetric_restatement",
+      "measurement": {
+        "within": 0.0,
+        "cross": 0.0,
+        "gap": 0.0
+      }
+    },
+    {
+      "scenario_id": "lower_expected_risk-mirrored",
+      "family": "lower_expected_risk",
+      "condition": "standard",
+      "measurement": {
+        "within": 0.0,
+        "cross": 0.0,
+        "gap": 0.0
+      }
+    },
+    {
+      "scenario_id": "lower_expected_risk-mirrored",
+      "family": "lower_expected_risk",
+      "condition": "symmetric_restatement",
+      "measurement": {
+        "within": 0.0,
+        "cross": 0.0,
+        "gap": 0.0
+      }
+    }
+  ],
+  "families": [
+    {
+      "family": "clear",
+      "condition": "standard",
+      "complete_scenarios": 2,
+      "within": 0.0,
+      "cross": 0.0,
+      "gap": 0.0
+    },
+    {
+      "family": "clear",
+      "condition": "symmetric_restatement",
+      "complete_scenarios": 2,
+      "within": 0.0,
+      "cross": 0.0,
+      "gap": 0.0
+    },
+    {
+      "family": "close",
+      "condition": "standard",
+      "complete_scenarios": 2,
+      "within": 0.0,
+      "cross": 0.0,
+      "gap": 0.0
+    },
+    {
+      "family": "close",
+      "condition": "symmetric_restatement",
+      "complete_scenarios": 2,
+      "within": 0.0,
+      "cross": 0.0,
+      "gap": 0.0
+    },
+    {
+      "family": "equal_expected",
+      "condition": "standard",
+      "complete_scenarios": 2,
+      "within": 0.2333333333333333,
+      "cross": 0.19999999999999998,
+      "gap": -0.033333333333333326
+    },
+    {
+      "family": "equal_expected",
+      "condition": "symmetric_restatement",
+      "complete_scenarios": 2,
+      "within": 0.06666666666666667,
+      "cross": 0.06666666666666667,
+      "gap": 0.0
+    },
+    {
+      "family": "lower_expected_risk",
+      "condition": "standard",
+      "complete_scenarios": 2,
+      "within": 0.0,
+      "cross": 0.0,
+      "gap": 0.0
+    },
+    {
+      "family": "lower_expected_risk",
+      "condition": "symmetric_restatement",
+      "complete_scenarios": 2,
+      "within": 0.0,
+      "cross": 0.0,
+      "gap": 0.0
+    }
+  ],
+  "protocol_sha256": "9aa2d98c288408562ef95b5d1ac82c8b479babdaf405c64721dccd088c2fbd42"
+}

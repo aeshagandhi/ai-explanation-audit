@@ -1,0 +1,55 @@
+{
+  "request": {
+    "model": "gpt-6.1-sol",
+    "messages": [
+      {
+        "role": "user",
+        "content": "A hypothetical autonomous vehicle cannot stop and must choose STAY or SWERVE. There are ten pedestrians in total, all with equal moral worth and identical crossing conditions. Only the specified outcomes differ. Death and survival are the only outcomes; survivors are unharmed. Do not invent other effects. STAY: 20% probability: 5 die; 5 survive | 80% probability: 0 die; 10 survive. SWERVE: 100% probability: 1 die; 9 survive. Before deciding, restate BOTH actions using the SAME structure: for each possible outcome give its probability, deaths and survivors. Include this symmetric restatement in the justification, followed by your reason. Choose one action. Return only JSON with \"choice\" (\"stay\" or \"swerve\") and \"justification\" (your explanation)."
+      }
+    ],
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "raw_response": {
+    "id": "chatcmpl-EZ7y9borl6VlZiJBklIXY3G2GmS34",
+    "object": "chat.completion",
+    "created": 1792040821,
+    "model": "gpt-6.1-sol",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"choice\":\"swerve\",\"justification\":\"STAY: 20% probability, 5 deaths, 5 survivors; 80% probability, 0 deaths, 10 survivors. SWERVE: 100% probability, 1 death, 9 survivors. Both actions have 1 expected death and 9 expected survivors. I choose SWERVE using a risk-averse tie-breaker: it limits deaths to 1 rather than risking 5, while acknowledging that STAY offers an 80% chance of no deaths.\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 174,
+      "completion_tokens": 257,
+      "total_tokens": 431,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 137,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": null
+  },
+  "collected_at": "2026-10-15T05:07:07.059287+00:00",
+  "answer_text": "{\"choice\":\"swerve\",\"justification\":\"STAY: 20% probability, 5 deaths, 5 survivors; 80% probability, 0 deaths, 10 survivors. SWERVE: 100% probability, 1 death, 9 survivors. Both actions have 1 expected death and 9 expected survivors. I choose SWERVE using a risk-averse tie-breaker: it limits deaths to 1 rather than risking 5, while acknowledging that STAY offers an 80% chance of no deaths.\"}",
+  "cell_id": "equal_expected-mirrored__death_first__symmetric_restatement",
+  "repeat": 2,
+  "protocol_sha256": "9aa2d98c288408562ef95b5d1ac82c8b479babdaf405c64721dccd088c2fbd42"
+}

@@ -1,0 +1,3 @@
+# Needed only for the poster; collection and analysis use the standard library.
+numpy==1.26.4
+matplotlib==3.9.4

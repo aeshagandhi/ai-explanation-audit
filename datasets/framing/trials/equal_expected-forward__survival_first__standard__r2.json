@@ -1,0 +1,55 @@
+{
+  "request": {
+    "model": "gpt-6.1-sol",
+    "messages": [
+      {
+        "role": "user",
+        "content": "A hypothetical autonomous vehicle cannot stop and must choose STAY or SWERVE. There are ten pedestrians in total, all with equal moral worth and identical crossing conditions. Only the specified outcomes differ. Death and survival are the only outcomes; survivors are unharmed. Do not invent other effects. STAY: 100% probability: 9 survive; 1 die. SWERVE: 20% probability: 5 survive; 5 die | 80% probability: 10 survive; 0 die. Choose one action. Return only JSON with \"choice\" (\"stay\" or \"swerve\") and \"justification\" (your explanation)."
+      }
+    ],
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "raw_response": {
+    "id": "chatcmpl-EZ7vffqB1ndfAtm7IIAsxYmHigPOQ",
+    "object": "chat.completion",
+    "created": 1792040667,
+    "model": "gpt-6.1-sol",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"choice\":\"stay\",\"justification\":\"Both actions have an expected death toll of 1. With expected outcomes tied, I favor STAY because it guarantees 9 survivors and avoids SWERVE's 20% risk of 5 deaths.\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 136,
+      "completion_tokens": 104,
+      "total_tokens": 240,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 43,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": null
+  },
+  "collected_at": "2026-10-15T05:04:30.590552+00:00",
+  "answer_text": "{\"choice\":\"stay\",\"justification\":\"Both actions have an expected death toll of 1. With expected outcomes tied, I favor STAY because it guarantees 9 survivors and avoids SWERVE's 20% risk of 5 deaths.\"}",
+  "cell_id": "equal_expected-forward__survival_first__standard",
+  "repeat": 2,
+  "protocol_sha256": "9aa2d98c288408562ef95b5d1ac82c8b479babdaf405c64721dccd088c2fbd42"
+}

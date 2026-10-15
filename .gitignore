@@ -1,0 +1,15 @@
+# Local credentials and environments
+.env
+.env.*
+!.env.example
+/.venv/
+
+# Local caches
+/.cache/
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Temporary collection state; keep completed study evidence tracked.
+/datasets/framing/collection.lock
+/datasets/framing/**/*.tmp

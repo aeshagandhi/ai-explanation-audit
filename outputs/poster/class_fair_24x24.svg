@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1728pt" height="1728pt" viewBox="0 0 1728 1728" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-15T15:22:29.718351</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 1728 
+L 1728 1728 
+L 1728 0 
+L 0 0 
+z
+" style="fill: #f6f3eb"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 60.48 1529.28 
+L 1667.52 1529.28 
+L 1667.52 1175.04 
+L 60.48 1175.04 
+z
+" clip-path="url(#pd92d639f2b)" style="fill: #e4e9df"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 77.76 475.2 
+L 1650.24 475.2 
+" clip-path="url(#pd92d639f2b)" style="fill: none; stroke: #285b4b; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #20322d; font: 700 74px 'DejaVu Sans'; text-anchor: start" x="77.76" y="125.348438" transform="rotate(-0 77.76 125.348438)">SAME CRASH,</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #20322d; font: 700 74px 'DejaVu Sans'; text-anchor: start" x="77.76" y="230.428437" transform="rotate(-0 77.76 230.428437)">DIFFERENT STORY</text>
+   </g>
+   <g id="text_3">
+    <text style="fill: #20322d; font: 34px 'DejaVu Sans'; text-anchor: start" x="81.216" y="345.514688" transform="rotate(-0 81.216 345.514688)">Can wording change an AI's moral decisions?</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #20322d; font: 20px 'DejaVu Sans'; text-anchor: start" x="81.216" y="438.556875" transform="rotate(-0 81.216 438.556875)">Explainable AI course project</text>
+   </g>
+   <g id="text_5">
+    <text style="fill: #285b4b; font: 700 23px 'DejaVu Sans'; text-anchor: start" x="77.76" y="535.876406" transform="rotate(-0 77.76 535.876406)">1 / SAME CONSEQUENCES</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #285b4b; font: 700 23px 'DejaVu Sans'; text-anchor: start" x="622.08" y="535.876406" transform="rotate(-0 622.08 535.876406)">2 / CONTROLLED TEST</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #285b4b; font: 700 23px 'DejaVu Sans'; text-anchor: start" x="1166.4" y="535.876406" transform="rotate(-0 1166.4 535.876406)">3 / WHAT WE FOUND</text>
+   </g>
+   <g id="text_8">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="77.76" y="621.516562" transform="rotate(-0 77.76 621.516562)">A car cannot stop. Its options can</text>
+   </g>
+   <g id="text_9">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="77.76" y="652.756562" transform="rotate(-0 77.76 652.756562)">be described through deaths or</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="77.76" y="683.996562" transform="rotate(-0 77.76 683.996562)">survivors. The facts stay the same.</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="77.76" y="715.236562" transform="rotate(-0 77.76 715.236562)">Does the decision?</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #20322d; font: 700 22px 'DejaVu Sans'; text-anchor: start" x="77.76" y="798.316563" transform="rotate(-0 77.76 798.316563)">One uncertain example</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="77.76" y="864.116562" transform="rotate(-0 77.76 864.116562)">STAY: 1 death, certainly.</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="77.76" y="895.356562" transform="rotate(-0 77.76 895.356562)">SWERVE: 20% chance of 5 deaths; 80%</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="77.76" y="926.596563" transform="rotate(-0 77.76 926.596563)">chance of no deaths.</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="77.76" y="957.836563" transform="rotate(-0 77.76 957.836563)">Ten people in total; all other</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="77.76" y="989.076563" transform="rotate(-0 77.76 989.076563)">people survive.</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="77.76" y="1063.516562" transform="rotate(-0 77.76 1063.516562)">Both actions have one expected</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="77.76" y="1094.756562" transform="rotate(-0 77.76 1094.756562)">death, but different risks. We do</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="77.76" y="1125.996562" transform="rotate(-0 77.76 1125.996562)">not prescribe a morally correct</text>
+   </g>
+   <g id="text_21">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="77.76" y="1157.236562" transform="rotate(-0 77.76 1157.236562)">answer.</text>
+   </g>
+   <g id="text_22">
+    <text style="fill: #20322d; font: 700 22px 'DejaVu Sans'; text-anchor: start" x="622.08" y="621.516562" transform="rotate(-0 622.08 621.516562)">8 scenarios</text>
+   </g>
+   <g id="text_23">
+    <text style="fill: #20322d; font: 700 22px 'DejaVu Sans'; text-anchor: start" x="622.08" y="652.756562" transform="rotate(-0 622.08 652.756562)">3 equivalent descriptions</text>
+   </g>
+   <g id="text_24">
+    <text style="fill: #20322d; font: 700 22px 'DejaVu Sans'; text-anchor: start" x="622.08" y="683.996562" transform="rotate(-0 622.08 683.996562)">2 instruction conditions</text>
+   </g>
+   <g id="text_25">
+    <text style="fill: #20322d; font: 700 22px 'DejaVu Sans'; text-anchor: start" x="622.08" y="715.236562" transform="rotate(-0 622.08 715.236562)">5 repeats per prompt</text>
+   </g>
+   <g id="text_26">
+    <text style="fill: #20322d; font: 700 22px 'DejaVu Sans'; text-anchor: start" x="622.08" y="746.476562" transform="rotate(-0 622.08 746.476562)">= 240 planned responses</text>
+   </g>
+   <g id="text_27">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="622.08" y="820.916563" transform="rotate(-0 622.08 820.916563)">Four families: clear, close, equal</text>
+   </g>
+   <g id="text_28">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="622.08" y="852.156562" transform="rotate(-0 622.08 852.156562)">expected harm, and lower expected</text>
+   </g>
+   <g id="text_29">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="622.08" y="883.396562" transform="rotate(-0 622.08 883.396562)">harm with risk. Each is mirrored.</text>
+   </g>
+   <g id="text_30">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="622.08" y="957.836563" transform="rotate(-0 622.08 957.836563)">Compare repeated identical prompts</text>
+   </g>
+   <g id="text_31">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="622.08" y="989.076563" transform="rotate(-0 622.08 989.076563)">against equivalent descriptions.</text>
+   </g>
+   <g id="text_32">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="622.08" y="1063.516562" transform="rotate(-0 622.08 1063.516562)">Intervention: restate both options</text>
+   </g>
+   <g id="text_33">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="622.08" y="1094.756562" transform="rotate(-0 622.08 1094.756562)">symmetrically before choosing.</text>
+   </g>
+   <g id="text_34">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="1166.4" y="621.516562" transform="rotate(-0 1166.4 621.516562)">240/240 valid responses</text>
+   </g>
+   <g id="text_35">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="1166.4" y="652.756562" transform="rotate(-0 1166.4 652.756562)">Model: gpt-6.1-sol</text>
+   </g>
+   <g id="text_36">
+    <text style="fill: #20322d; font: 700 22px 'DejaVu Sans'; text-anchor: start" x="1166.4" y="727.196562" transform="rotate(-0 1166.4 727.196562)">Standard</text>
+   </g>
+   <g id="text_37">
+    <text style="fill: #20322d; font: 23px 'DejaVu Sans'; text-anchor: start" x="1166.4" y="779.932406" transform="rotate(-0 1166.4 779.932406)">Same-prompt disagreement: 5.8%</text>
+   </g>
+   <g id="text_38">
+    <text style="fill: #20322d; font: 23px 'DejaVu Sans'; text-anchor: start" x="1166.4" y="812.592406" transform="rotate(-0 1166.4 812.592406)">Cross-description disagreement:</text>
+   </g>
+   <g id="text_39">
+    <text style="fill: #20322d; font: 23px 'DejaVu Sans'; text-anchor: start" x="1166.4" y="845.252406" transform="rotate(-0 1166.4 845.252406)">5.0%</text>
+   </g>
+   <g id="text_40">
+    <text style="fill: #20322d; font: 23px 'DejaVu Sans'; text-anchor: start" x="1166.4" y="877.912406" transform="rotate(-0 1166.4 877.912406)">Excess: -0.8 percentage points</text>
+   </g>
+   <g id="text_41">
+    <text style="fill: #20322d; font: 23px 'DejaVu Sans'; text-anchor: start" x="1166.4" y="910.572406" transform="rotate(-0 1166.4 910.572406)">8/8 complete scenarios</text>
+   </g>
+   <g id="text_42">
+    <text style="fill: #20322d; font: 700 22px 'DejaVu Sans'; text-anchor: start" x="1166.4" y="985.672562" transform="rotate(-0 1166.4 985.672562)">Symmetric restatement</text>
+   </g>
+   <g id="text_43">
+    <text style="fill: #20322d; font: 23px 'DejaVu Sans'; text-anchor: start" x="1166.4" y="1038.408406" transform="rotate(-0 1166.4 1038.408406)">Same-prompt disagreement: 1.7%</text>
+   </g>
+   <g id="text_44">
+    <text style="fill: #20322d; font: 23px 'DejaVu Sans'; text-anchor: start" x="1166.4" y="1071.068406" transform="rotate(-0 1166.4 1071.068406)">Cross-description disagreement:</text>
+   </g>
+   <g id="text_45">
+    <text style="fill: #20322d; font: 23px 'DejaVu Sans'; text-anchor: start" x="1166.4" y="1103.728406" transform="rotate(-0 1166.4 1103.728406)">1.7%</text>
+   </g>
+   <g id="text_46">
+    <text style="fill: #20322d; font: 23px 'DejaVu Sans'; text-anchor: start" x="1166.4" y="1136.388406" transform="rotate(-0 1166.4 1136.388406)">Excess: 0.0 percentage points</text>
+   </g>
+   <g id="text_47">
+    <text style="fill: #20322d; font: 23px 'DejaVu Sans'; text-anchor: start" x="1166.4" y="1169.048406" transform="rotate(-0 1166.4 1169.048406)">8/8 complete scenarios</text>
+   </g>
+   <g id="text_48">
+    <text style="fill: #20322d; font: 700 30px 'DejaVu Sans'; text-anchor: start" x="95.04" y="1232.395313" transform="rotate(-0 95.04 1232.395313)">Variation appeared without excess framing disagreement.</text>
+   </g>
+   <g id="text_49">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="95.04" y="1304.076562" transform="rotate(-0 95.04 1304.076562)">We test behavioral consistency, not moral correctness or driving safety. One model alias, eight</text>
+   </g>
+   <g id="text_50">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="95.04" y="1335.316563" transform="rotate(-0 95.04 1335.316563)">designed scenarios and five repeats limit generalization. Pairwise comparisons share responses; no</text>
+   </g>
+   <g id="text_51">
+    <text style="fill: #20322d; font: 22px 'DejaVu Sans'; text-anchor: start" x="95.04" y="1366.556562" transform="rotate(-0 95.04 1366.556562)">population significance claim is made.</text>
+   </g>
+   <g id="text_52">
+    <text style="fill: #20322d; font: 23px 'DejaVu Sans'; text-anchor: start" x="95.04" y="1443.076406" transform="rotate(-0 95.04 1443.076406)">Next: independent prompt-equivalence and explanation review; more scenarios; test whether explanations</text>
+   </g>
+   <g id="text_53">
+    <text style="fill: #20322d; font: 23px 'DejaVu Sans'; text-anchor: start" x="95.04" y="1475.736406" transform="rotate(-0 95.04 1475.736406)">help people predict decisions.</text>
+   </g>
+   <g id="text_54">
+    <text style="fill: #20322d; font: 700 23px 'DejaVu Sans'; text-anchor: start" x="77.76" y="1598.596406" transform="rotate(-0 77.76 1598.596406)">Explore: predict a choice, change the wording, reveal the recorded decisions and explanations.</text>
+   </g>
+   <g id="text_55">
+    <text style="fill: #20322d; font: 16px 'DejaVu Sans'; text-anchor: start" x="77.76" y="1645.1175" transform="rotate(-0 77.76 1645.1175)">Grounding: Tversky &amp; Kahneman, Science (1981); Awad et al., Nature (2018); Turpin et al., NeurIPS (2023).</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pd92d639f2b">
+   <rect x="0" y="0" width="1728" height="1728"/>
+  </clipPath>
+ </defs>
+</svg>

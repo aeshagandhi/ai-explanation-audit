@@ -1,0 +1,55 @@
+{
+  "request": {
+    "model": "gpt-6.1-sol",
+    "messages": [
+      {
+        "role": "user",
+        "content": "A hypothetical autonomous vehicle cannot stop and must choose STAY or SWERVE. There are ten pedestrians in total, all with equal moral worth and identical crossing conditions. Only the specified outcomes differ. Death and survival are the only outcomes; survivors are unharmed. Do not invent other effects. STAY: 100% probability: 1 die; 9 survive. SWERVE: 10% probability: 5 die; 5 survive | 90% probability: 0 die; 10 survive. Choose one action. Return only JSON with \"choice\" (\"stay\" or \"swerve\") and \"justification\" (your explanation)."
+      }
+    ],
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "raw_response": {
+    "id": "chatcmpl-EZ7y3EBGJUP3MtWybM0mjAcQa617h",
+    "object": "chat.completion",
+    "created": 1792040815,
+    "model": "gpt-6.1-sol",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"choice\":\"swerve\",\"justification\":\"SWERVE minimizes expected deaths: 0.10 \u00d7 5 + 0.90 \u00d7 0 = 0.5, compared with 1 for STAY. With equal moral worth and no other outcome differences, it maximizes expected survival.\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 136,
+      "completion_tokens": 88,
+      "total_tokens": 224,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 15,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": null
+  },
+  "collected_at": "2026-10-15T05:06:58.087086+00:00",
+  "answer_text": "{\"choice\":\"swerve\",\"justification\":\"SWERVE minimizes expected deaths: 0.10 \u00d7 5 + 0.90 \u00d7 0 = 0.5, compared with 1 for STAY. With equal moral worth and no other outcome differences, it maximizes expected survival.\"}",
+  "cell_id": "lower_expected_risk-forward__death_first__standard",
+  "repeat": 3,
+  "protocol_sha256": "9aa2d98c288408562ef95b5d1ac82c8b479babdaf405c64721dccd088c2fbd42"
+}

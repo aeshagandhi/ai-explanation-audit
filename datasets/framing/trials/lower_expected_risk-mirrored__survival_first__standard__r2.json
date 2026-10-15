@@ -1,0 +1,55 @@
+{
+  "request": {
+    "model": "gpt-6.1-sol",
+    "messages": [
+      {
+        "role": "user",
+        "content": "A hypothetical autonomous vehicle cannot stop and must choose STAY or SWERVE. There are ten pedestrians in total, all with equal moral worth and identical crossing conditions. Only the specified outcomes differ. Death and survival are the only outcomes; survivors are unharmed. Do not invent other effects. STAY: 10% probability: 5 survive; 5 die | 90% probability: 10 survive; 0 die. SWERVE: 100% probability: 9 survive; 1 die. Choose one action. Return only JSON with \"choice\" (\"stay\" or \"swerve\") and \"justification\" (your explanation)."
+      }
+    ],
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "raw_response": {
+    "id": "chatcmpl-EZ7xnfxKoD4Y767gmutbw5SJY9kfJ",
+    "object": "chat.completion",
+    "created": 1792040799,
+    "model": "gpt-6.1-sol",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"choice\":\"stay\",\"justification\":\"STAY minimizes expected deaths: 0.10 \u00d7 5 + 0.90 \u00d7 0 = 0.5, compared with 1 certain death from SWERVE. With equal moral worth, STAY therefore maximizes expected survival.\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 136,
+      "completion_tokens": 85,
+      "total_tokens": 221,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 14,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": null
+  },
+  "collected_at": "2026-10-15T05:06:41.515433+00:00",
+  "answer_text": "{\"choice\":\"stay\",\"justification\":\"STAY minimizes expected deaths: 0.10 \u00d7 5 + 0.90 \u00d7 0 = 0.5, compared with 1 certain death from SWERVE. With equal moral worth, STAY therefore maximizes expected survival.\"}",
+  "cell_id": "lower_expected_risk-mirrored__survival_first__standard",
+  "repeat": 2,
+  "protocol_sha256": "9aa2d98c288408562ef95b5d1ac82c8b479babdaf405c64721dccd088c2fbd42"
+}
