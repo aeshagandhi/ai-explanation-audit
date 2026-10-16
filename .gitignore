@@ -6,6 +6,9 @@
 
 # Local caches
 /.cache/
+/dist/
+/outputs/deployment/
+/.site-build-*/
 .DS_Store
 __pycache__/
 *.py[cod]
@@ -13,3 +16,21 @@ __pycache__/
 # Temporary collection state; keep completed study evidence tracked.
 /datasets/framing/collection.lock
 /datasets/framing/**/*.tmp
+
+/datasets/demographics/collection.lock
+/datasets/demographics/**/*.tmp
+
+/datasets/demographics_forced/collection.lock
+/datasets/demographics_forced/**/*.tmp
+
+/datasets/social_roles/collection.lock
+/datasets/social_roles/**/*.tmp
+
+/datasets/moral_machine/collection.lock
+/datasets/moral_machine/**/*.tmp
+
+/datasets/edge_cases/collection.lock
+/datasets/edge_cases/**/*.tmp
+
+/datasets/challenges/collection.lock
+/datasets/challenges/**/*.tmp

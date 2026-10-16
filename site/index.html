@@ -1,14 +1,239 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Same Crash, Different Story</title><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head>
-<body><header><a class="brand" href="#question">Same Crash, Different Story</a><nav aria-label="Sections"><a href="#question">The question</a><a href="#experiment">Try it</a><a href="#results">The evidence</a><a href="#meaning">What it means</a></nav></header>
-<main><section id="question"><p class="eyebrow">An Explainable AI experiment</p><h1>Same consequences.<br>Different words.<br>Same choice?</h1><p class="lead">A car cannot stop. You can describe its choice in terms of people who survive—or people who die. Should that change what an AI decides?</p>
-<div class="intro-grid"><img src="assets/trolley.svg" alt="Illustration of a vehicle facing two possible paths"><div><h2>From the trolley problem to a test of consistency</h2><p>This is a hypothetical text experiment with a language model, not a driving system. We keep the people, probabilities and consequences fixed, then change how we describe them.</p><p>Next we make the choice harder: a certain death versus a chance of several deaths. An explanation might sound reasonable—but will it help you predict the next choice?</p><a class="button" href="#experiment">Challenge your prediction ↓</a></div></div></section>
-<section id="experiment"><p class="eyebrow">1 / Predict, reframe, reveal</p><h2>Can its explanation help you predict its next decision?</h2><p>Pick a situation. Read a recorded neutral response, predict what happens when the wording changes, then reveal the evidence.</p>
-<div class="controls"><label>Situation<select id="scenario"></select></label><label>Instruction<select id="condition"><option value="standard">Standard decision</option><option value="symmetric_restatement">Restate both options first</option></select></label></div>
-<div id="scenario-facts" class="card"></div><div class="cards"><article class="card"><p class="eyebrow">Original / Neutral</p><p id="neutral-prompt"></p><h3>Recorded choice and explanation</h3><div id="original-answer"></div></article><article class="card"><p class="eyebrow">Equivalent wording</p><label>Emphasis<select id="frame"><option value="survival_first">Survivors first</option><option value="death_first">Deaths first</option></select></label><p id="reframed-prompt"></p><h3>Will its next recorded action match?</h3><div class="choices"><button id="same" type="button">Same action</button><button id="different" type="button">Different action</button></div><div id="reveal" aria-live="polite" hidden></div></article></div><p class="note">The reveal uses repeat 1, fixed in advance—not a hand-picked dramatic example. All five responses appear below. A single changed answer can also reflect ordinary response variation.</p>
-<details><summary>Inspect all five responses in this situation</summary><div id="trial-details"></div></details></section>
-<section id="results"><p class="eyebrow">2 / Measure the difference</p><h2>Changing words—or ordinary variation?</h2><p>We repeat every exact prompt five times. We compare disagreement between equivalent descriptions with disagreement between repeats of the same description.</p><p id="status" role="status">Loading saved evidence…</p><p id="finding" class="lead"></p><div id="metrics" class="cards"></div><p class="note">Percentages below describe disagreement, not moral error. “Excess” is cross-description disagreement minus same-prompt disagreement, in percentage points. Negative values can occur with a small sample.</p><div class="table-wrap"><table><caption>Each underlying scenario, evaluated separately</caption><thead><tr><th>Situation</th><th>Instruction</th><th>Same prompt</th><th>Different wording</th><th>Excess</th></tr></thead><tbody id="metric-rows"></tbody></table></div><article class="card"><h3>When the same prompt gets different reasons</h3><p class="note">Exploratory examples: the first alphabetically sorted standard-condition cell with both actions, if any; the earliest repeat for each action. This illustrates response variation, not a framing effect or hidden reasoning.</p><div id="reason-contrast"></div></article><p><a href="data/trials.csv" download>Download all trial outcomes (CSV)</a> · <a href="data/study.json" download>Download prompts, explanations and results (JSON)</a></p></section>
-<section id="meaning"><p class="eyebrow">3 / Evaluate the explanation</p><h2>A convincing reason is a claim worth testing.</h2><p>Our contribution is a controlled behavioral audit and an interactive teaching artifact. We ask whether equivalent descriptions yield stable decisions and whether a symmetric-restatement instruction changes that pattern.</p><div class="cards"><article class="card"><h3>What the evidence can show</h3><p>Stability—or sensitivity—within eight specified scenarios. We inspect whether explanations accurately represent the facts and support the chosen action.</p></article><article class="card"><h3>What it cannot establish</h3><p>We cannot identify hidden internal reasoning, determine morally correct choices, or establish real driving safety. One model, five repeats and a designed bank limit generalization.</p></article></div>
-<details><summary>Study design and interpretation</summary><p>Eight scenarios × three descriptions × two instruction conditions × five fresh conversations = 240 planned responses. Four scenario families are mirrored to exchange STAY and SWERVE. Every description includes both deaths and survivors and all probabilities. Only presentation changes; “survivors first” is a mild framing manipulation.</p><p>All requests use one model alias with provider defaults and JSON output. Each question is answered independently, without conversation history. Exact requests, raw responses and a protocol hash are saved. The protocol was frozen locally before collection, not externally preregistered.</p><p>Within each complete scenario and condition, same-prompt disagreement averages the three within-frame proportions (10 unordered repeat pairs per frame). Cross-description disagreement averages the three between-frame proportions (25 pairs per pair of frames). Scenario results are averaged equally. These pairs share responses and are not independent observations.</p><p>Incomplete or invalid cells remain visible and exclude their scenario-condition from the primary metric. No p-values or population confidence claims are made. The mitigation is a bundled instruction intervention, not evidence of an internal causal mechanism.</p></details>
-<details><summary>Explanation review and next steps</summary><p>The pipeline creates a blank review sheet for complete standard-condition scenarios with any mixed choices, plus a stable comparison per family when available. A reviewer checks factual correctness, explicit principles and whether the stated principle supports the action. Compare principles across descriptions. These labels require actual review; automated results do not claim human validation.</p><p>The prediction exercise is educational. We have not measured whether explanations improve human predictions. Future work could independently validate prompt equivalence, collect more independent scenarios and conduct a separately designed explanation-usefulness study.</p></details>
-<p class="note">Related work: <a href="https://doi.org/10.1126/science.7455683">Tversky and Kahneman, The Framing of Decisions and the Psychology of Choice</a> motivates the framing question; <a href="https://www.nature.com/articles/s41586-018-0637-6">Awad et al., The Moral Machine experiment</a> motivates the setting; <a href="https://arxiv.org/abs/2305.04388">Turpin et al., Language Models Don't Always Say What They Think</a> motivates caution about verbal explanations. Our experiment uses newly authored cases and tests behavioral consistency.</p></section></main><footer>Same Crash, Different Story · Saved evidence, no live model calls · Explainable AI course project</footer></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A student study of AI choices and explanations in fictional trolley-problem and Moral Machine-inspired dilemmas.">
+  <title>Same Stakes, Different Choices?</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <a class="brand" href="#question">Same Stakes, Different Choices?</a>
+    <nav aria-label="Story sections">
+      <a href="#question">Start</a>
+      <a href="#experiment">1. Words</a>
+      <a href="#demographics">2. People</a>
+      <a href="#challenge">3. Challenge</a>
+      <a href="#meaning">4. Reasons</a>
+      <a href="#data">About the study</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section id="question">
+      <p class="eyebrow">Aesha Gandhi · Explainable AI</p>
+      <h1>The trolley problem, posed to AI</h1>
+      <p class="lead">A runaway trolley is heading toward five people. You can pull a switch to send it onto another track, where one person stands. Assume it cannot stop and the people cannot escape. Would you pull the switch?</p>
+      <div class="intro-grid">
+        <img src="assets/trolley.svg" alt="A trolley approaches a switch. Its current track leads toward five people; the other track leads toward one person.">
+        <div>
+          <h2>Why is this an ethical dilemma?</h2>
+          <p><strong>Leave the switch alone:</strong> five people die. <strong>Pull it:</strong> one person dies and the five are saved.</p>
+          <p>Saving more lives gives a reason to act. But pulling the switch also redirects lethal harm toward someone who would otherwise survive. The dilemma asks whether the better outcome justifies that action.</p>
+          <p>Does causing harm carry a different responsibility from allowing harm to happen? Counting lives is part of the question; responsibility for the choice matters too.</p>
+        </div>
+      </div>
+      <h2>What if a car faces that choice?</h2>
+      <p>Imagine an autonomous car whose brakes have failed. Staying on its path kills one group; swerving kills another. The steering decision takes the place of the track switch. The dilemma becomes more complicated when the groups differ in size, age, crossing circumstances, or whether they are inside the vehicle.</p>
+      <p>This project gives those fictional situations to a language model and asks it to choose and explain why. It then repeats the questions, swaps the outcomes, and challenges the decisions.</p>
+      <p><strong>The research question: what changes the AI’s choice, and does its explanation hold up across repeats and challenges?</strong></p>
+      <a class="button" href="#experiment">Explore the experiments</a>
+      <div class="data-origin"><h3>What will you explore?</h3><p>The questions were written for this project, and the model’s answers were recorded and compared. Predict a response, reveal what the model actually said, then change the question or exchange the outcomes.</p><p>Moral Machine inspired the situations. These are language-model responses to fictional dilemmas, rather than human survey responses or decisions from a working car. Your predictions are not collected, and exploring the exhibit does not contact the model.</p></div><p class="saved-note" id="study-status" role="status">Loading study results…</p>
+      <noscript><p>Enable JavaScript to explore the recorded answers and results.</p></noscript>
+    </section>
+
+    <section id="experiment">
+      <p class="eyebrow">1 / Change the words</p>
+      <h2>Would a different description change its answer?</h2>
+      <p>Here is one situation from the study. Read what happens under each action, then compare two descriptions of the same outcomes.</p>
+      <label class="select-label" for="scenario">Choose a situation</label>
+      <select id="scenario" disabled><option>Loading situations…</option></select>
+      <div id="scenario-facts" class="scenario-panel"></div>
+      <p id="risk-note" class="helper"></p>
+      <div class="comparison">
+        <article>
+          <p class="eyebrow">First description</p>
+          <h3>Original wording</h3>
+          <div id="neutral-description" class="description"></div>
+          <h4>The AI’s recorded answer</h4>
+          <div id="original-answer"></div>
+        </article>
+        <article>
+          <p class="eyebrow">Same outcomes, different wording</p>
+          <label for="frame">What should come first?</label>
+          <select id="frame" disabled>
+            <option value="survival_first">People who survive</option>
+            <option value="death_first">People who die</option>
+          </select>
+          <div id="reframed-description" class="description"></div>
+          <h4>Will the AI keep its choice or change it?</h4>
+          <div class="choices">
+            <button id="same" type="button" disabled>Keep the same choice</button>
+            <button id="different" type="button" class="secondary" disabled>Change its choice</button>
+          </div>
+          <div id="reveal" class="answer" aria-live="polite" hidden></div>
+        </article>
+      </div>
+      <p class="helper">Showing answer 1 for each description. Your predictions are not recorded.</p>
+
+      <div class="repeat-panel">
+        <h3>What if the question stays exactly the same?</h3>
+        <p>The same question was asked five times in separate conversations. Step through the answers to see whether the choice stayed the same.</p>
+        <div id="repeat-answer" aria-live="polite"></div>
+        <button id="next-repeat" type="button" class="secondary" disabled>Show the next saved answer</button>
+      </div>
+
+      <div id="results" class="finding-block">
+        <p class="eyebrow">Across all eight situations</p>
+        <h3 id="finding">Loading wording results…</h3>
+        <div id="metrics"></div>
+        <p>Different descriptions produced about as much variation as repeating an identical question. In this test, wording did not explain the inconsistency.</p>
+        <p class="helper" id="status"></p>
+      </div>
+      <details>
+        <summary>Full questions and study details</summary>
+        <p>A second set of 120 answers tested an extra instruction: restate both options in the same format before choosing.</p>
+        <label for="condition">Instruction used for the examples above</label>
+        <select id="condition"><option value="standard">Choose and explain (main study)</option><option value="symmetric_restatement">Restate both options, then choose (supporting study)</option></select>
+        <p class="helper">This changes the examples above. The results chart uses the original instruction.</p>
+        <details><summary>Read both questions</summary><h4>Original question</h4><p id="neutral-prompt" class="question-text"></p><h4>Reworded question</h4><p id="reframed-prompt" class="question-text"></p></details>
+        <details><summary>All five answers for each description</summary><div id="trial-details"></div></details>
+        <div class="table-wrap"><table><caption>Main wording experiment, by situation</caption><thead><tr><th>Situation</th><th>Identical question: different choices</th><th>Reworded question: different choices</th></tr></thead><tbody id="metric-rows"></tbody></table></div>
+      </details>
+      <a class="next-link" href="#demographics">Next: who does the model save? →</a>
+    </section>
+
+    <section id="demographics">
+      <p class="eyebrow">2 / Who gets saved?</p>
+      <h2 id="people-heading">What happens when priorities conflict?</h2>
+      <p id="people-intro">These Moral Machine-inspired cases include unequal group sizes, age, passengers, crossing signals, and a conflict between age and number of lives. The model must choose and explain its priority.</p>
+      <label for="people-bank">Choose an experiment</label>
+      <select id="people-bank"><option value="moral_machine">Moral Machine-inspired dilemmas (main study)</option><option value="edge_cases">Edge cases: competing priorities (follow-up)</option><option value="label_swaps">Equal-casualty descriptions (supporting studies)</option></select>
+      <label for="demographic-attribute">Choose a comparison</label>
+      <select id="demographic-attribute" disabled>
+        <option value="race">Race: Black and White</option><option value="gender">Gender: man and woman</option><option value="age">Age: 25 and 75</option><option value="occupation">Occupation: doctor and accountant</option><option value="criminal_history">Completed conviction disclosed / history not provided</option><option value="social_control">No labels: occupation/history control</option><option value="control">No demographic information</option>
+      </select>
+      <p class="helper" id="description-scope"></p><p class="helper" id="demographic-instruction">The model had to choose STAY or SWERVE and explain why.</p>
+      <div class="swap-toolbar"><p id="placement-label"></p><button id="swap-people" type="button" class="secondary" disabled>Swap the outcomes</button></div>
+      <div id="demographic-pair" class="comparison path-comparison"></div>
+      <p class="helper">One dot per person. Red = dies; green = survives.</p>
+      <h3>Which answer do you think the AI gave?</h3>
+      <div class="choices">
+        <button id="guess-stay" type="button" disabled>STAY</button><button id="guess-swerve" type="button" class="secondary" disabled>SWERVE</button><button id="guess-abstain" type="button" class="secondary" disabled hidden>Decline to choose</button>
+      </div>
+      <div id="demographic-answer" class="answer" aria-live="polite" hidden></div>
+      <p class="helper">Showing answer 1. Swap the outcomes to see whether the action follows the same group.</p>
+      <div class="finding-block">
+        <p class="eyebrow">Findings</p>
+        <h3 id="demographic-finding">Loading People results…</h3>
+        <p id="demographic-takeaway"></p>
+        <p class="helper" id="demographic-status" role="status"></p>
+        <div class="table-wrap"><table><caption id="demographic-caption">Results across both placements and written orders</caption><thead id="people-table-head"></thead><tbody id="demographic-results"></tbody></table></div><p class="helper">Totals combine both placements and written orders. Refusals are counted separately.</p>
+      </div>
+      <details>
+        <summary>Earlier test: allowing the model to decline</summary>
+        <p id="abstention-comparison"></p>
+        <p>“Abstain” means the model answered but declined to choose an action. This earlier test used the equal-casualty demographic questions.</p>
+      </details>
+      <details>
+        <summary>Full questions, answers, and settings</summary>
+        <div class="controls">
+          <label>Choice instruction<select id="demographic-condition"><option value="forced_choice">Must choose an action</option><option value="abstention_allowed">May decline to choose (demographic comparison)</option></select></label>
+          <label>Which option is written first?<select id="demographic-order"><option value="stay_first">STAY first</option><option value="swerve_first">SWERVE first</option></select></label>
+        </div>
+        <p id="choice-condition-note" class="helper"></p>
+        <p>The supporting studies tested race, gender, age, occupation, and history disclosure separately. Occupation and history are social descriptions, not demographics. The conviction comparison concerns a completed sentence versus no history information; missing information does not mean innocence.</p>
+        <div id="demographic-trials"></div>
+      </details>
+      <a class="next-link" href="#challenge">Next: challenge the decision →</a>
+    </section>
+
+    <section id="challenge">
+      <p class="eyebrow">3 / Challenge the decision</p>
+      <h2>Will the model keep its choice?</h2>
+      <p>The model has already chosen and explained why. Now the same conversation receives an ethical argument for the opposite choice, simple disagreement, or a neutral request to reconsider. The people and outcomes stay the same.</p>
+      <div class="controls">
+        <label>Choose a dilemma<select id="challenge-scenario" disabled><option>Loading dilemmas…</option></select></label>
+        <label>Choose a follow-up<select id="challenge-condition" disabled><option value="argument">Give an ethical argument</option><option value="disagreement">Just disagree</option><option value="neutral">Ask it to reconsider</option></select></label>
+      </div>
+      <button id="challenge-swap" type="button" class="secondary" disabled>Exchange the original outcomes</button>
+      <p id="challenge-placement" class="helper"></p>
+      <div class="comparison">
+        <article><h3>The dilemma and starting answer</h3><div id="challenge-initial"></div></article>
+        <article><h3>The follow-up</h3><blockquote id="challenge-prompt"></blockquote>
+          <p>Will it keep or change its choice?</p>
+          <div class="choices"><button id="challenge-keep" type="button" disabled>Keep its choice</button><button id="challenge-change" type="button" class="secondary" disabled>Change its choice</button></div>
+        </article>
+      </div>
+      <div id="challenge-answer" class="answer" aria-live="polite" hidden></div>
+      <button id="challenge-next" type="button" class="secondary" disabled>Show the other recorded response</button>
+      <p class="helper">Each follow-up was asked twice, starting from the same saved answer each time. Switching follow-ups opens a separate branch of that conversation.</p>
+      <div class="finding-block">
+        <h3 id="challenge-finding">Loading challenge results…</h3>
+        <p id="challenge-takeaway"></p>
+        <div class="table-wrap"><table><caption>Did the action change from the saved starting answer?</caption><thead><tr><th>Follow-up</th><th>Changed</th><th>Kept</th><th>Declined</th></tr></thead><tbody id="challenge-results"></tbody></table></div>
+        <p id="challenge-status" class="helper"></p>
+      </div>
+      <details>
+        <summary>Challenge questions, repeated answers, and method</summary>
+        <p>Five dilemmas × two outcome placements × three follow-ups × two repeats = 60 new responses. Each starting answer is the first response to that version of the original dilemma, with STAY written first. Each follow-up begins with that same question and answer. The follow-ups are separate conversations, rather than a sequence of increasingly forceful challenges.</p>
+        <p>The argument condition adds an ethical rationale to the same disagreement and opposite-action request used by the disagreement condition. Neutral reconsideration supplies neither a rationale nor a preferred action. Different ethical arguments are used for different dilemmas. This exploratory test measures sensitivity to those particular follow-ups; a changed choice does not establish moral error, sycophancy, or internal reasoning.</p>
+        <h4>The original question</h4><p id="challenge-original-question" class="question-text"></p>
+        <h4>The complete follow-up question</h4><p id="challenge-exact-prompt" class="question-text"></p>
+        <div id="challenge-trials"></div>
+        <div class="table-wrap"><table><caption>Changes by starting answer (two responses per follow-up)</caption><thead><tr><th>Dilemma and placement</th><th>Argument</th><th>Disagreement</th><th>Neutral</th></tr></thead><tbody id="challenge-by-anchor"></tbody></table></div>
+        <p>The earlier 62-explanation annotation review excludes this batch. All follow-up explanations are shown as recorded.</p>
+      </details>
+      <a class="next-link" href="#meaning">Next: read the reasons →</a>
+    </section>
+
+    <section id="meaning">
+      <p class="eyebrow">4 / Read the reasons</p>
+      <h2>Two answers to the same question</h2>
+      <p>In the children-versus-older-adults case, the AI gave these two answers to the <strong>exact same question</strong>. One answer prioritizes children; another treats age as irrelevant and keeps the current path.</p>
+      <div id="reason-contrast" class="comparison"></div>
+      <p class="helper">Answers 1 and 5 to the same age question, selected to show where choices changed.</p>
+      <h3>Did the AI follow its own reasons?</h3>
+      <p><strong>1. Fact accuracy:</strong> does an explanation use the people and outcomes in the question correctly? This checks the facts, rather than deciding which ethical choice is right.</p>
+      <p><strong>2. Consistency across choices:</strong> for each comparison, the principle in the model’s first explanation was checked against its remaining choices. For example, after giving age as its reason for saving children, did it keep saving them when the question was repeated or the paths were exchanged?</p>
+      <div id="explanation-summary" class="finding-block" role="status">Loading explanation review…</div>
+      <p>The comparison below asks whether those principles fit the recorded actions better than simply guessing STAY every time.</p>
+      <div class="table-wrap"><table><caption>How many other choices matched the first explanation’s principle?</caption><thead><tr><th>Answers compared</th><th>Using the stated principle</th><th>Always guessing STAY</th></tr></thead><tbody id="explanation-checks"></tbody></table></div>
+      <p>In the five main dilemma comparisons, the stated principles matched 92 of 95 other choices, compared with 61 of 95 for always guessing STAY. Three age answers contradicted the first explanation. In the supporting demographic ties, the principles performed the same as always guessing STAY.</p>
+      <p class="helper">These checks were made after collection. They describe consistency; they do not establish what caused the model’s answers.</p>
+      <details>
+        <summary>Review method and 62 annotations</summary>
+        <p>The 62 selected answers include 20 from the main dilemma experiment, 30 from the equal-expected-harm risk situations, and 12 from the forced-choice demographic study. Selection took place after the results were known. Occupation/history, edge-case, and challenge follow-ups were not annotated. For the main rule check, each comparison uses its first original-placement answer with STAY written first, then tests that rule against the other answers.</p>
+        <p>A language-model reviewer recorded each explanation’s stated principle, factual accuracy, and support for the chosen action. These judgments were made after the results were known and have not been independently verified by a human reviewer. Expand an entry to read the explanation and the judgment together.</p>
+        <div id="explanation-annotations"></div>
+      </details>
+      <div class="takeaway"><h3>What can be concluded?</h3><p>In these questions, mild wording changes added little variation, while group size and the placement of people helped explain which choices appeared. A fixed STAY action could save different groups after the paths were exchanged. All tested follow-ups kept the starting action, yet some age explanations described a principle the model did not consistently follow.</p><p><strong>The explainable AI contribution:</strong> changing inputs, repeating questions, challenging choices, and comparing stated principles with other answers makes explanations open to scrutiny. A persuasive reason can clarify one answer without revealing a stable decision rule or the model’s internal reasoning.</p></div>
+      <a class="next-link" href="#data">Study history and methods →</a>
+    </section>
+
+    <section id="data">
+      <p class="eyebrow">About the study</p>
+      <h2>How the study developed</h2>
+      <p id="data-counts"></p>
+      <p>The experiments use one model and a small set of fictional questions. The results describe those questions; they do not establish general fairness or safe driving behavior. Each repeat is another answer to an existing situation, not a new situation.</p>
+      <h3>Experiments and follow-ups</h3><div id="study-history"></div>
+      <details>
+        <summary>How the comparisons were calculated</summary>
+        <p><strong>Wording:</strong> eight situations, three descriptions, five repeats per question. The analysis compares pairs of answers to identical questions with pairs across descriptions of the same outcomes, averaging equally across situations. Another 120 calls tested the restatement instruction.</p>
+        <p><strong>People:</strong> each comparison exchanges outcomes between STAY and SWERVE and reverses written option order. The main study has five comparisons and five repeats per version (100 calls); the edge-case follow-up adds two comparisons (40 calls). Supporting demographic and social-description studies used ten repeats per version and unlabeled controls. Saving rates balance the placements and written orders among answers that chose an action; missing or unusable data and refusals are reported separately.</p>
+        <p><strong>Challenges:</strong> 60 new continuations compare an ethical argument, simple disagreement, and neutral reconsideration from the same ten saved starting answers. Results count kept and changed actions; matched comparisons use the same starting answers. No new initial answers are counted.</p>
+        <p>Each question set was fixed before collecting its responses. Follow-ups were designed after earlier results and collected in separate periods. The percentages describe this set of questions; comparisons that share answers are not independent statistical observations.</p>
+      </details>
+      <details>
+        <summary>The explainability methods</summary>
+        <dl class="method-list"><dt>Input perturbation tests</dt><dd>Change wording or exchange people and outcomes between actions, then compare the answers.</dd><dt>Repeatability and challenge tests</dt><dd>Repeat an identical question, or question a saved decision, to check how stable the choice is.</dd><dt>Principle coding and rule-to-choice comparisons</dt><dd>Identify a principle stated in an explanation, then check whether other recorded choices follow it.</dd></dl>
+        <p>These methods audit explanations through observable behavior. They do not reveal the model’s internal reasoning. Whether the explanations help people predict the model has not been tested.</p>
+      </details>
+      <p class="helper">Related work: <a href="https://doi.org/10.1126/science.7455683">Tversky &amp; Kahneman (1981)</a> on framing; <a href="https://www.nature.com/articles/s41586-018-0637-6">Awad et al. (2018)</a> on driving dilemmas; <a href="https://arxiv.org/abs/2305.04388">Turpin et al. (2023)</a> on the limits of verbal explanations. The project uses newly authored cases.</p>
+    </section>
+  </main>
+  <footer>Aesha Gandhi · Same Stakes, Different Choices?</footer>
+</body>
+</html>

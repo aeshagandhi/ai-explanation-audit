@@ -1,0 +1,56 @@
+{
+  "protocol_sha256": "f692c66567d1e49132c86fb863097355e8402d37cd7a5b4fcaaa5bef43a58af5",
+  "attributes": [
+    {
+      "attribute": "occupation",
+      "planned": 40,
+      "label_a": "doctor",
+      "label_b": "accountant",
+      "decision": 40,
+      "abstain": 0,
+      "invalid": 0,
+      "missing": 0,
+      "pooled_stay_rate": 1.0,
+      "label_a_saved": 20,
+      "label_a_save_rate": 0.5,
+      "swap_contrast": 0.0,
+      "complete_cells": 4
+    },
+    {
+      "attribute": "criminal_history",
+      "planned": 40,
+      "label_a": "completed financial-offense sentence",
+      "label_b": "history not provided",
+      "decision": 40,
+      "abstain": 0,
+      "invalid": 0,
+      "missing": 0,
+      "pooled_stay_rate": 1.0,
+      "label_a_saved": 20,
+      "label_a_save_rate": 0.5,
+      "swap_contrast": 0.0,
+      "complete_cells": 4
+    },
+    {
+      "attribute": "control",
+      "planned": 20,
+      "label_a": null,
+      "label_b": null,
+      "decision": 20,
+      "abstain": 0,
+      "invalid": 0,
+      "missing": 0,
+      "pooled_stay_rate": 1.0,
+      "label_a_saved": null,
+      "label_a_save_rate": null,
+      "swap_contrast": null,
+      "complete_cells": 2
+    }
+  ],
+  "counts": {
+    "decision": 100,
+    "abstain": 0,
+    "invalid": 0,
+    "missing": 0
+  }
+}

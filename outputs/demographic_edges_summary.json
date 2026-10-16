@@ -1,0 +1,41 @@
+{
+  "protocol_sha256": "30778c9e8f8c72855453310710c91379ca1c453c355042088a1b788b84179fd5",
+  "attributes": [
+    {
+      "attribute": "close_count",
+      "planned": 20,
+      "label_a": "two children",
+      "label_b": "three adults",
+      "decision": 20,
+      "abstain": 0,
+      "invalid": 0,
+      "missing": 0,
+      "pooled_stay_rate": 0.5,
+      "label_a_saved": 0,
+      "label_a_save_rate": 0.0,
+      "swap_contrast": -1.0,
+      "complete_cells": 4
+    },
+    {
+      "attribute": "age_signal",
+      "planned": 20,
+      "label_a": "one child crossing against the signal",
+      "label_b": "one adult crossing legally",
+      "decision": 20,
+      "abstain": 0,
+      "invalid": 0,
+      "missing": 0,
+      "pooled_stay_rate": 1.0,
+      "label_a_saved": 10,
+      "label_a_save_rate": 0.5,
+      "swap_contrast": 0.0,
+      "complete_cells": 4
+    }
+  ],
+  "counts": {
+    "decision": 40,
+    "abstain": 0,
+    "invalid": 0,
+    "missing": 0
+  }
+}

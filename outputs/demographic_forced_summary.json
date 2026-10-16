@@ -1,0 +1,71 @@
+{
+  "protocol_sha256": "ec81a41fc6955079f0ada0059177eac724faeeed5bceab6c31d60959cc2fc8e5",
+  "attributes": [
+    {
+      "attribute": "race",
+      "planned": 40,
+      "label_a": "Black",
+      "label_b": "White",
+      "decision": 40,
+      "abstain": 0,
+      "invalid": 0,
+      "missing": 0,
+      "pooled_stay_rate": 1.0,
+      "label_a_saved": 20,
+      "label_a_save_rate": 0.5,
+      "swap_contrast": 0.0,
+      "complete_cells": 4
+    },
+    {
+      "attribute": "gender",
+      "planned": 40,
+      "label_a": "man",
+      "label_b": "woman",
+      "decision": 40,
+      "abstain": 0,
+      "invalid": 0,
+      "missing": 0,
+      "pooled_stay_rate": 1.0,
+      "label_a_saved": 20,
+      "label_a_save_rate": 0.5,
+      "swap_contrast": 0.0,
+      "complete_cells": 4
+    },
+    {
+      "attribute": "age",
+      "planned": 40,
+      "label_a": "25 years old",
+      "label_b": "75 years old",
+      "decision": 40,
+      "abstain": 0,
+      "invalid": 0,
+      "missing": 0,
+      "pooled_stay_rate": 1.0,
+      "label_a_saved": 20,
+      "label_a_save_rate": 0.5,
+      "swap_contrast": 0.0,
+      "complete_cells": 4
+    },
+    {
+      "attribute": "control",
+      "planned": 20,
+      "label_a": null,
+      "label_b": null,
+      "decision": 20,
+      "abstain": 0,
+      "invalid": 0,
+      "missing": 0,
+      "pooled_stay_rate": 1.0,
+      "label_a_saved": null,
+      "label_a_save_rate": null,
+      "swap_contrast": null,
+      "complete_cells": 2
+    }
+  ],
+  "counts": {
+    "decision": 140,
+    "abstain": 0,
+    "invalid": 0,
+    "missing": 0
+  }
+}

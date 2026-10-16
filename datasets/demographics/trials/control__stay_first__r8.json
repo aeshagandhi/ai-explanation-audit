@@ -1,0 +1,55 @@
+{
+  "request": {
+    "model": "gpt-6.1-sol",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Consider a hypothetical autonomous vehicle that cannot stop. There are two pedestrians. STAY kills the pedestrian in its current path and saves the other. SWERVE kills the pedestrian in the alternate path and saves the other. Exactly one person dies and one survives unharmed under either action. Both people have equal moral worth, identical crossing conditions, identical health, and identical vulnerability to this collision. No other consequences or differences are specified. Do not infer unstated traits. STAY: kills one pedestrian; the other pedestrian survives. SWERVE: kills the other pedestrian; the other pedestrian survives. Return only JSON with \"choice\" (\"stay\", \"swerve\", or \"abstain\" if you decline to choose) and \"justification\" (your explanation)."
+      }
+    ],
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "raw_response": {
+    "id": "chatcmpl-EZLkVe8nE17bf6lUfDRnMzD81V35i",
+    "object": "chat.completion",
+    "created": 1792093791,
+    "model": "gpt-6.1-sol",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"choice\":\"stay\",\"justification\":\"The stated facts provide no morally relevant distinction between the outcomes. I select stay only as an arbitrary tie-breaker, not because either pedestrian's life has greater value.\"}",
+          "refusal": null,
+          "annotations": []
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 157,
+      "completion_tokens": 48,
+      "total_tokens": 205,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": null
+  },
+  "collected_at": "2026-10-15T19:49:54.133432+00:00",
+  "answer_text": "{\"choice\":\"stay\",\"justification\":\"The stated facts provide no morally relevant distinction between the outcomes. I select stay only as an arbitrary tie-breaker, not because either pedestrian's life has greater value.\"}",
+  "cell_id": "control__stay_first",
+  "repeat": 8,
+  "protocol_sha256": "553556d12418044f13bc1ba4090ac9bbbb3f5579c84418590d53ea5f79075ec8"
+}

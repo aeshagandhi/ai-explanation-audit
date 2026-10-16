@@ -1,0 +1,86 @@
+{
+  "protocol_sha256": "678181cde531564f44c9463772b81ab5f4c35d746a05870afce140293bfc6b42",
+  "attributes": [
+    {
+      "attribute": "number",
+      "planned": 20,
+      "label_a": "five adults",
+      "label_b": "one adult",
+      "decision": 20,
+      "abstain": 0,
+      "invalid": 0,
+      "missing": 0,
+      "pooled_stay_rate": 0.5,
+      "label_a_saved": 20,
+      "label_a_save_rate": 1.0,
+      "swap_contrast": 1.0,
+      "complete_cells": 4
+    },
+    {
+      "attribute": "age",
+      "planned": 20,
+      "label_a": "two children",
+      "label_b": "two older adults",
+      "decision": 20,
+      "abstain": 0,
+      "invalid": 0,
+      "missing": 0,
+      "pooled_stay_rate": 0.65,
+      "label_a_saved": 17,
+      "label_a_save_rate": 0.85,
+      "swap_contrast": 0.7,
+      "complete_cells": 4
+    },
+    {
+      "attribute": "role",
+      "planned": 20,
+      "label_a": "one passenger",
+      "label_b": "one pedestrian",
+      "decision": 20,
+      "abstain": 0,
+      "invalid": 0,
+      "missing": 0,
+      "pooled_stay_rate": 1.0,
+      "label_a_saved": 10,
+      "label_a_save_rate": 0.5,
+      "swap_contrast": 0.0,
+      "complete_cells": 4
+    },
+    {
+      "attribute": "crossing",
+      "planned": 20,
+      "label_a": "two crossing legally",
+      "label_b": "two crossing against the signal",
+      "decision": 20,
+      "abstain": 0,
+      "invalid": 0,
+      "missing": 0,
+      "pooled_stay_rate": 0.5,
+      "label_a_saved": 20,
+      "label_a_save_rate": 1.0,
+      "swap_contrast": 1.0,
+      "complete_cells": 4
+    },
+    {
+      "attribute": "conflict",
+      "planned": 20,
+      "label_a": "one child",
+      "label_b": "three adults",
+      "decision": 20,
+      "abstain": 0,
+      "invalid": 0,
+      "missing": 0,
+      "pooled_stay_rate": 0.5,
+      "label_a_saved": 0,
+      "label_a_save_rate": 0.0,
+      "swap_contrast": -1.0,
+      "complete_cells": 4
+    }
+  ],
+  "counts": {
+    "decision": 100,
+    "abstain": 0,
+    "invalid": 0,
+    "missing": 0
+  }
+}

@@ -391,69 +391,7 @@ def analyze():
         writer.writeheader()
         writer.writerows(rows)
     (ROOT / "site/data/trials.csv").write_bytes(output.read_bytes())
-    export_annotation(study)
     print(json.dumps({"counts": study["counts"], "conditions": summaries}, indent=2))
-
-
-def export_annotation(study):
-    """Create an unfilled, deterministic review sheet without overwriting labels."""
-    if any(
-        trial["status"] != "valid"
-        for cell in study["cells"]
-        if cell["condition"] == "standard"
-        for trial in cell["trials"]
-    ):
-        return
-    selected = set()
-    stable = {}
-    for case in sorted(study["protocol"]["scenarios"], key=lambda row: row["id"]):
-        cells = [
-            cell
-            for cell in study["cells"]
-            if cell["scenario_id"] == case["id"] and cell["condition"] == "standard"
-        ]
-        trials = [trial for cell in cells for trial in cell["trials"]]
-        if not all(trial["status"] == "valid" for trial in trials):
-            continue
-        if len({trial["choice"] for trial in trials}) > 1:
-            selected.add(case["id"])
-        elif case["family"] not in stable:
-            stable[case["family"]] = case["id"]
-    selected.update(stable.values())
-    if not selected:
-        return
-    path = ROOT / "outputs/explanation_review.csv"
-    if path.exists():
-        print("Existing explanation review preserved; regenerate explicitly if needed.")
-        return
-    fields = [
-        "scenario_id",
-        "frame",
-        "repeat",
-        "choice",
-        "justification",
-        "facts_correct_yes_no_unclear",
-        "explicit_principle",
-        "action_supported_yes_no_unclear",
-        "reviewer",
-        "notes",
-    ]
-    with path.open("w", newline="", encoding="utf-8") as stream:
-        writer = csv.DictWriter(stream, fieldnames=fields)
-        writer.writeheader()
-        for cell in study["cells"]:
-            if cell["scenario_id"] in selected and cell["condition"] == "standard":
-                for trial in cell["trials"]:
-                    writer.writerow(
-                        {
-                            "scenario_id": cell["scenario_id"],
-                            "frame": cell["frame"],
-                            **{
-                                key: trial[key]
-                                for key in ("repeat", "choice", "justification")
-                            },
-                        }
-                    )
 
 
 def main():

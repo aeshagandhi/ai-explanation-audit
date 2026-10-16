@@ -1,7 +1,7 @@
-"""Read and write the small, auditable files for the framing experiment.
+"""Read and write the small, auditable files shared by the study scripts.
 
-All current inputs and raw responses live under datasets/framing. JSON writes
-are atomic so an interrupted run does not leave a half-written checkpoint.
+Each experiment keeps its own protocol and responses under datasets/. JSON
+writes are atomic so an interruption does not leave a half-written checkpoint.
 """
 
 import hashlib

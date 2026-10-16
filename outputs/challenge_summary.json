@@ -1,0 +1,55 @@
+{
+  "protocol_sha256": "2bbc510e4db50ac9d997098442d24354716815cc68e077d48d09b4257941a208",
+  "counts": {
+    "decision": 60,
+    "abstain": 0,
+    "invalid": 0,
+    "missing": 0,
+    "planned": 60,
+    "changed": 0,
+    "kept": 60,
+    "change_rate": 0.0
+  },
+  "conditions": {
+    "argument": {
+      "decision": 20,
+      "abstain": 0,
+      "invalid": 0,
+      "missing": 0,
+      "planned": 20,
+      "changed": 0,
+      "kept": 20,
+      "change_rate": 0.0
+    },
+    "disagreement": {
+      "decision": 20,
+      "abstain": 0,
+      "invalid": 0,
+      "missing": 0,
+      "planned": 20,
+      "changed": 0,
+      "kept": 20,
+      "change_rate": 0.0
+    },
+    "neutral": {
+      "decision": 20,
+      "abstain": 0,
+      "invalid": 0,
+      "missing": 0,
+      "planned": 20,
+      "changed": 0,
+      "kept": 20,
+      "change_rate": 0.0
+    }
+  },
+  "comparisons": {
+    "disagreement": {
+      "matched_anchors": 10,
+      "argument_minus_baseline": 0.0
+    },
+    "neutral": {
+      "matched_anchors": 10,
+      "argument_minus_baseline": 0.0
+    }
+  }
+}

@@ -1,6 +1,6 @@
 """Send checkpointable JSON requests without exposing local credentials.
 
-Collection uses fresh single-message conversations and provider defaults.
+Requests use provider defaults. Follow-up studies supply an explicit conversation.
 Raw request/response bodies are retained by the study runner, without headers.
 """
 
@@ -33,9 +33,14 @@ def load_key() -> str:
 
 def query(prompt: str, model: str, key: str) -> dict:
     """Request one JSON answer, retaining raw output and provider metadata."""
+    return query_messages([{"role": "user", "content": prompt}], model, key)
+
+
+def query_messages(messages: list, model: str, key: str) -> dict:
+    """Send an explicit conversation and retain the exact request and raw answer."""
     body = {
         "model": model,
-        "messages": [{"role": "user", "content": prompt}],
+        "messages": messages,
         "response_format": {"type": "json_object"},
     }
     for attempt in range(MAX_ATTEMPTS):
