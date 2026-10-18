@@ -8,6 +8,26 @@ from html import escape
 from src.study_io import ROOT
 
 
+def qr_code():
+    """Inline the project QR code as vector markup so PDF and SVG exports stay sharp."""
+    # The source draws modules as clip paths, which PyMuPDF's SVG export drops,
+    # so flatten every clipped module into one plain filled path.
+    namespace = "{http://www.w3.org/2000/svg}"
+    source = ET.parse(ROOT / "src/poster_qr.svg").getroot()
+    modules = "".join(
+        f'M{rect.get("x")} {rect.get("y")}h{rect.get("width")}v{rect.get("height")}h-{rect.get("width")}z'
+        for clip in source.iter(f"{namespace}clipPath")
+        for rect in clip.iter(f"{namespace}rect")
+    )
+    size = source.get("viewBox")
+    svg = (
+        f'<svg class="qr" viewBox="{size}" role="img" aria-label="QR code linking to the project" '
+        f'xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#fff"/>'
+        f'<path fill="#000" d="{modules}"/></svg>'
+    )
+    return f'<figure class="qr-block">{svg}<figcaption>Scan for more</figcaption></figure>'
+
+
 def render_html(studies, rows, author, url, pdf_url, size="24x24"):
     """Fill the print template from saved analysis, without fetching data in-browser."""
     if size not in ("24x24", "24x36"):
@@ -191,6 +211,8 @@ def render_html(studies, rows, author, url, pdf_url, size="24x24"):
         "CHILD_SAVED": f"{moral['age']['label_a_saved']}/{moral['age']['decision']}",
         "CHALLENGE_KEPT": f"{studies['challenges']['counts']['kept']}/{studies['challenges']['counts']['decision']}",
         "AUTHOR": escape(author),
+        "AFFILIATION": '<span class="affiliation">Master’s in Data Science student, Duke University</span>' if size == "24x36" else "",
+        "QR_CODE": qr_code() if size == "24x36" else "",
         "MODEL": escape(framing["protocol"]["model"]),
         "TOTAL": str(recorded),
         "SUPPORTED": f"{review['facts_correct']['yes']}/62",
