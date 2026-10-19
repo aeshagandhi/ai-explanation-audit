@@ -2,7 +2,7 @@
 
 **Do an AI's choices and explanations hold up when you repeat the question, swap the outcomes, or push back?**
 
-**Live site:** https://aeshagandhi.github.io/av-pedestrian-perception/
+**Live site:** https://aeshagandhi.github.io/ai-explanation-audit/ · **Repo:** https://github.com/aeshagandhi/ai-explanation-audit
 **Poster (24 × 36 in):** [PDF](outputs/poster/class_fair_24x36.pdf) · [HTML](site/poster-24x36.html)
 
 A self-driving car's brakes fail. It can **STAY** on its path or **SWERVE**, and someone dies either way. This is the trolley problem with a car. I used versions of this dilemma to test a language model (`gpt-6.1-sol`): I asked it to choose and explain why, then checked whether its explanations actually matched how it behaved across 820 recorded answers.

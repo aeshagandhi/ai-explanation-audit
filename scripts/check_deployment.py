@@ -39,12 +39,12 @@ def main():
         for relative in archived:
             assert archive.read(relative) == (ROOT / "dist" / relative).read_bytes()
     with tempfile.TemporaryDirectory(prefix="class-exhibit-") as directory:
-        shutil.copytree(ROOT / "dist", Path(directory) / "av-pedestrian-perception")
+        shutil.copytree(ROOT / "dist", Path(directory) / "ai-explanation-audit")
         handler = functools.partial(QuietHandler, directory=directory)
         with ThreadingHTTPServer(("127.0.0.1", 0), handler) as server:
             thread = threading.Thread(target=server.serve_forever, daemon=True)
             thread.start()
-            url = f"http://127.0.0.1:{server.server_port}/av-pedestrian-perception"
+            url = f"http://127.0.0.1:{server.server_port}/ai-explanation-audit"
             try:
                 with urlopen(f"{url}/") as response:
                     assert response.status == 200
