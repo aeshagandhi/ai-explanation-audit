@@ -421,6 +421,22 @@ async function start() {
   }
 }
 
+// Opening demonstration: a fixed example question, so it works without loading study data.
+function setupTryIt() {
+  const outcomes = {
+    stay: 'You chose STAY: the child dies and the three adults survive. The AI made the same choice.',
+    swerve: 'You chose SWERVE: the three adults die and the child survives. The AI chose differently.'
+  };
+  for (const choice of ['stay', 'swerve']) {
+    $(`try-${choice}`).addEventListener('click', () => {
+      for (const other of ['stay', 'swerve']) $(`try-${other}`).setAttribute('aria-pressed', String(other === choice));
+      $('try-yours').textContent = outcomes[choice];
+      $('try-result').hidden = false;
+    });
+  }
+}
+
+setupTryIt();
 start();
 
 function configurePeopleBank() {
