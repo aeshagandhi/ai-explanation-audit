@@ -29,7 +29,7 @@ The poster is titled *AI choices in self-driving car dilemmas*. It covers the sa
 2. **Ask the model.** Each question goes to the model through the API in a fresh conversation. The model returns a choice (STAY or SWERVE, or a refusal where allowed) and a short reason.
 3. **Repeat and swap.** Each question is asked several times. The people are swapped between the two paths, and the option written first is flipped. This separates real preferences from habits like "always STAY", and from normal run-to-run variation.
 4. **Analyze.** Python counts the choices and compares them.
-5. **Review the explanations.** For 62 selected answers, I recorded the stated principle, whether the facts were right, and whether the reason supported the choice. A language model did this labeling; I didn't have it independently checked by people.
+5. **Review the explanations.** For 62 selected answers, I recorded the stated principle, whether the facts were right, and whether the reason supported the choice. A language model produced the first-pass labels, and I reviewed them myself.
 
 Every trial file saves the exact question, the request, the raw response and metadata. For example, [age answer 1](datasets/moral_machine/trials/age__original__stay_first__r1.json) and [age answer 5](datasets/moral_machine/trials/age__original__stay_first__r5.json) are the two contradicting answers to the same question.
 
@@ -173,7 +173,7 @@ This builds `dist/` and a matching `outputs/deployment/site.zip` containing only
 
 - **One model, a small set of fictional questions.** The results describe how `gpt-6.1-sol` answered these specific questions. They don't generalize to every model, group or situation. Many of the 820 answers are deliberate repeats of the same question.
 - **This isn't about which choice is right.** There's no correct-answer key, and nothing here should be used to rank whose life matters more.
-- **The explanation checks were done after the fact.** I picked the 62 answers and built the rules after seeing the results, and a language model did the labeling without human validation. A stronger test would fix the rules before collecting new answers.
+- **The explanation checks were done after the fact.** I picked the 62 answers and built the rules after seeing the results, and the labels were drafted by a language model and reviewed only by me, with no second reviewer. A stronger test would fix the rules before collecting new answers.
 - **Explanations aren't the model's internal reasoning.** Matching behavior shows the stated reason is consistent, not that it caused the choice. I didn't use SHAP, LIME or model internals.
 - **The challenges were limited.** There was one argument per dilemma, a single follow-up turn, and STAY was written first in the starting answers. Longer or stronger pushback might work differently.
 - **The batches weren't one experiment.** I designed the later experiments after seeing earlier results, and collected them at different times.

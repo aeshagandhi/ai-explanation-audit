@@ -132,7 +132,7 @@ The rules come from **what the model said**, not from me deciding what's right.
 
 Each sounds reasonable on its own, but they contradict each other. You only notice that when you compare answers.
 
-A language model did the explanation labeling, and I didn't have it checked by human reviewers. I also picked which answers to review after seeing the results. It's a consistency check on past answers, not a real prediction test, and it can't show what's actually happening inside the model.
+A language model produced the first-pass explanation labels, and I reviewed them myself. There was no second reviewer. I also picked which answers to review after seeing the results. It's a consistency check on past answers, not a real prediction test, and it can't show what's actually happening inside the model.
 
 ## 8. What it means
 
