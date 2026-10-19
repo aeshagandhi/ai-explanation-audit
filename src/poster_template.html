@@ -136,9 +136,11 @@
     <div class="paper-frame">
       <article class="poster {{POSTER_CLASS}}" aria-labelledby="poster-title">
         <header class="poster-header">
-          <p class="author">{{AUTHOR}}</p>
-          <h1 id="poster-title">AI choices in self-driving car dilemmas</h1>
-          <p class="subtitle">Who should be saved? A study of ethical choices and AI explanations in fictional crashes</p>
+          <div class="header-text">
+            <p class="author">{{AUTHOR}}{{AFFILIATION}}</p>
+            <h1 id="poster-title">AI choices in self-driving car dilemmas</h1>
+            <p class="subtitle">Who should be saved? A study of ethical choices and AI explanations in fictional crashes</p>
+          </div>{{QR_CODE}}
         </header>
 
         <section class="problem" aria-labelledby="problem-heading">
@@ -201,6 +203,7 @@
             <p class="column-label">Experiments 5 to 7</p>
             <h2 id="people-heading">Who was saved?</h2>
             {{PEOPLE_EXPERIMENTS}}
+            {{IMPLICATIONS}}
           </div>
           <div class="research-column" aria-labelledby="challenges-heading">
             <p class="column-label">Experiment 8 and explanation evaluation</p>

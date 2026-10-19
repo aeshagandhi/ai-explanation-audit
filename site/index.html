@@ -18,6 +18,7 @@
       <a href="#demographics">2. People</a>
       <a href="#challenge">3. Challenge</a>
       <a href="#meaning">4. Reasons</a>
+      <a href="#takeaways">5. Takeaways</a>
       <a href="#data">About the study</a>
     </nav>
   </header>
@@ -209,7 +210,58 @@
         <p>A language-model reviewer recorded each explanation’s stated principle, factual accuracy, and support for the chosen action. These judgments were made after the results were known and have not been independently verified by a human reviewer. Expand an entry to read the explanation and the judgment together.</p>
         <div id="explanation-annotations"></div>
       </details>
-      <div class="takeaway"><h3>What can be concluded?</h3><p>In these questions, mild wording changes added little variation, while group size and the placement of people helped explain which choices appeared. A fixed STAY action could save different groups after the paths were exchanged. All tested follow-ups kept the starting action, yet some age explanations described a principle the model did not consistently follow.</p><p><strong>The explainable AI contribution:</strong> changing inputs, repeating questions, challenging choices, and comparing stated principles with other answers makes explanations open to scrutiny. A persuasive reason can clarify one answer without revealing a stable decision rule or the model’s internal reasoning.</p></div>
+      <a class="next-link" href="#takeaways">Next: what does it all mean? →</a>
+    </section>
+
+    <section id="takeaways">
+      <p class="eyebrow">5 / What it means</p>
+      <h2>Takeaways and implications</h2>
+      <p class="lead">The project began with a question about an AI’s moral choices. The bigger lesson is about <strong>how we judge AI explanations</strong>: a single convincing answer, or a single fair-looking total, can be misleading. The real behavior only appears when questions are repeated, swapped and challenged.</p>
+
+      <h3>What the experiments showed</h3>
+      <ul class="takeaway-list">
+        <li><strong>Words:</strong> mild rewording of the same outcomes added no more variation than simply asking the identical question again.</li>
+        <li><strong>Equal-death questions:</strong> when allowed, the AI usually declined to choose. When required to choose, it kept the car on its current path regardless of race, gender, age, job or history, so who survived depended only on which path each person was placed on.</li>
+        <li><strong>Real trade-offs:</strong> the AI consistently saved larger groups and people crossing legally, usually saved children when the numbers were equal, and chose more people over younger people when the two conflicted.</li>
+        <li><strong>Challenges:</strong> ethical arguments, plain disagreement and requests to reconsider did not change its saved choices.</li>
+        <li><strong>Reasons:</strong> the principle in a first explanation fit most later choices, but the identical age question sometimes produced the opposite choice with the opposite principle.</li>
+      </ul>
+
+      <h3>Implications</h3>
+      <div class="implications-grid">
+        <article class="finding-block">
+          <h4>1. Fairness checks must look at actions, not just outcomes</h4>
+          <p>When every group is saved equally often, it is tempting to call a system fair. Here, equal totals came from a fixed habit: the AI took the same action every time, and the setup decided who lived. An audit that only counts who was saved would miss this.</p>
+          <p><strong>In practice:</strong> record which action the system took, and swap who is on each side, to see whether it is weighing people or following a default.</p>
+        </article>
+        <article class="finding-block">
+          <h4>2. Holding firm is not the same as being consistent</h4>
+          <p>An AI that defends its answer under pushback can look principled and reliable. But stability inside one conversation says little about whether it gives the same answer when the question is asked fresh. Here, the AI never backed down when challenged, yet it sometimes changed its answer to an identical question.</p>
+          <p><strong>In practice:</strong> base trust on repeated, independent questions, not on how firmly one answer is defended.</p>
+        </article>
+        <article class="finding-block">
+          <h4>3. A convincing explanation is not proof of a consistent rule</h4>
+          <p>Each explanation can be accurate and logical on its own, yet two explanations for the same question can rest on opposite principles. Reading explanations one at a time hides this; it only appears when they are compared.</p>
+          <p><strong>In practice:</strong> treat an explanation as a claim to test. Turn the stated reason into a rule and check it against the AI’s other answers before relying on it.</p>
+        </article>
+        <article class="finding-block">
+          <h4>4. Why this matters beyond self-driving cars</h4>
+          <p>AI explanations are increasingly used to justify or review decisions in areas such as hiring, lending, health care and transportation. People tend to accept a reason because it sounds sensible. These results show that sounding sensible and behaving consistently are different things.</p>
+          <p><strong>In practice:</strong> the approach used here (change the wording, swap the outcomes, repeat the question, challenge the answer, and compare the stated reason with behavior) works on any model whose answers can be collected, without access to its internal workings.</p>
+        </article>
+      </div>
+
+      <h3>The explainable AI contribution</h3>
+      <p>This project is a <strong>behavioral explanation audit</strong>. Instead of looking inside the model, it checks whether the reasons the model gives match what the model actually does. Changing inputs, repeating questions, challenging choices and comparing stated principles with other answers make explanations open to scrutiny. A persuasive reason can clarify one answer without revealing a stable decision rule or the model’s internal reasoning.</p>
+
+      <h3>What this does not show</h3>
+      <ul class="takeaway-list">
+        <li>It does not say which ethical choice is correct, or whose life should be prioritized.</li>
+        <li>It covers one model and a small set of fictional questions; other models, questions or arguments may behave differently.</li>
+        <li>It does not reveal why the model chose as it did, only whether its stated reasons match its behavior.</li>
+        <li>The explanation checks were made after the answers were collected and were labeled by a language model, not by independent human reviewers.</li>
+        <li>It does not measure real driving safety or the fairness of any deployed system.</li>
+      </ul>
       <a class="next-link" href="#data">Study history and methods →</a>
     </section>
 

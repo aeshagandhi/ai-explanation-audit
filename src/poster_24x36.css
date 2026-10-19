@@ -1,7 +1,13 @@
 /* Portrait companion: same research and visual language, larger reading sizes. */
 .poster--portrait { padding: .80in .72in .65in; gap: .25in; font-size: 26pt; line-height: 1.25; }
 .poster--portrait .poster-header { padding-top: .22in; }
-.poster--portrait .author { font-size: 26pt; margin-bottom: .16in !important; }
+.poster--portrait .poster-header { display: flex; justify-content: space-between; align-items: center; gap: .50in; }
+.poster--portrait .header-text { flex: 1; min-width: 0; }
+.poster--portrait .author { font-size: 30pt; color: var(--navy); margin-bottom: .16in !important; }
+.poster--portrait .affiliation { display: block; font-size: 24pt; font-weight: 400; color: var(--muted); margin-top: .04in; }
+.poster--portrait .qr-block { flex: 0 0 2.6in; }
+.poster--portrait .qr { display: block; width: 2.6in; height: 2.6in; }
+.poster--portrait .qr-block figcaption { font-size: 20pt; margin-top: -.12in; }
 .poster--portrait h1 { font-size: 72pt; line-height: 1.08; }
 .poster--portrait .subtitle { font-size: 29pt; margin-top: .20in !important; }
 .poster--portrait h2 { font-size: 38pt; padding-bottom: .12in; margin-bottom: .17in !important; }
@@ -18,7 +24,7 @@
 .poster--portrait .research-column h3 { font-size: 30pt; margin-bottom: .12in !important; }
 .poster--portrait .experiment-heading { flex-wrap: wrap; row-gap: .03in; margin-bottom: .14in; }
 .poster--portrait .experiment-heading h3 { margin-bottom: 0 !important; }
-.poster--portrait .research-column p { font-size: 23pt; line-height: 1.24; }
+.poster--portrait .research-column p { font-size: 24pt; line-height: 1.24; }
 .poster--portrait .research-column p + p { margin-top: .14in; }
 .poster--portrait .research-column .answer-count { font-size: 20pt; }
 .poster--portrait .research-column .experiment + .experiment,
@@ -27,7 +33,7 @@
 .poster--portrait .research-column .parameters { font-size: 20pt; }
 .poster--portrait .question-example { margin-top: .16in; padding: .10in 0 .10in .14in; }
 .poster--portrait .question-example .example-label { font-size: 18pt; margin-bottom: .07in !important; }
-.poster--portrait .question-example .question-text { font-size: 21pt; line-height: 1.24; }
+.poster--portrait .question-example .question-text { font-size: 22pt; line-height: 1.24; }
 .poster--portrait .saving-chart { margin-top: .20in !important; }
 .poster--portrait .saving-chart figcaption { font-size: 21pt; margin-bottom: .14in; }
 .poster--portrait .saving-row { margin-top: .12in; }
@@ -49,4 +55,8 @@
 .poster--portrait .refusal-chart figcaption, .poster--portrait .path-swap-chart figcaption { font-size: 21pt; }
 .poster--portrait .refusal-track { height: .22in; }
 .poster--portrait .path-swap-chart svg { height: 1.40in; }
-.poster--portrait .references { font-size: 16pt; padding-top: .12in; }
+.poster--portrait .references { font-size: 18pt; padding-top: .12in; }
+.poster--portrait .research-column .implications { margin-top: .16in; padding-top: .09in; border-top: 1.5pt solid #000; break-inside: avoid; }
+.poster--portrait .research-column .implications p { font-size: 20pt; line-height: 1.18; }
+.poster--portrait .research-column .implications p + p { margin-top: .08in; }
+.poster--portrait .research-column .implications h3 { margin-bottom: .07in !important; }

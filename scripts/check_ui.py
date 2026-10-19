@@ -246,6 +246,7 @@ def check_layout(page, url, width):
         "demographics",
         "challenge",
         "meaning",
+        "takeaways",
         "data",
     ]:
         page.locator(f'nav a[href="#{anchor}"]').click()
@@ -296,7 +297,7 @@ def check_narrow_layout(browser, url):
         page.goto(url)
         page.wait_for_function("document.querySelectorAll('#explanation-checks tr').length === 3")
         assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1"), width
-        for section in ("experiment", "demographics", "challenge", "meaning", "data"):
+        for section in ("experiment", "demographics", "challenge", "meaning", "takeaways", "data"):
             page.locator(f'nav a[href="#{section}"]').click()
             page.wait_for_function("id => document.querySelector(`#${id}`).getBoundingClientRect().top >= document.querySelector('header').getBoundingClientRect().bottom - 1", arg=section)
             page.wait_for_function("id => document.querySelector(`nav a[href='#${id}']`).getAttribute('aria-current') === 'location'", arg=section)

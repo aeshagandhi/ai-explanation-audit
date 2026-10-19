@@ -28,6 +28,21 @@ def qr_code():
     return f'<figure class="qr-block">{svg}<figcaption>Scan for more</figcaption></figure>'
 
 
+def implications():
+    """Explain why the findings matter for evaluating AI explanations (24 × 36 poster only)."""
+    return (
+        '<section class="implications" aria-labelledby="implications-heading">'
+        '<h3 id="implications-heading">Implications</h3>'
+        '<p><strong>Fairness checks:</strong> equal outcomes can come from a fixed habit, so audits should '
+        'track what the AI did, not only who was saved.</p>'
+        '<p><strong>Trust:</strong> an AI that holds firm under pushback can still answer differently '
+        'when the same question is asked again.</p>'
+        '<p><strong>Explanations:</strong> a convincing reason for one answer is not proof of a consistent rule. '
+        'Test it across many repeated and swapped questions before relying on it.</p>'
+        '</section>'
+    )
+
+
 def render_html(studies, rows, author, url, pdf_url, size="24x24"):
     """Fill the print template from saved analysis, without fetching data in-browser."""
     if size not in ("24x24", "24x36"):
@@ -213,6 +228,7 @@ def render_html(studies, rows, author, url, pdf_url, size="24x24"):
         "AUTHOR": escape(author),
         "AFFILIATION": '<span class="affiliation">Master’s in Data Science student, Duke University</span>' if size == "24x36" else "",
         "QR_CODE": qr_code() if size == "24x36" else "",
+        "IMPLICATIONS": implications() if size == "24x36" else "",
         "MODEL": escape(framing["protocol"]["model"]),
         "TOTAL": str(recorded),
         "SUPPORTED": f"{review['facts_correct']['yes']}/62",
