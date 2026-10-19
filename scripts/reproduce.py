@@ -40,7 +40,8 @@ STEPS = [
     ),
     ("Challenge follow-ups", "src.challenge_study", ["analyze"]),
     ("Explanation review", "src.analyze_explanations", []),
-    ("Poster and site PDF", "src.create_poster", []),
+    ("Poster, 24 x 24 inches", "src.create_poster", []),
+    ("Poster, 24 x 36 inches", "src.create_poster", ["--size", "24x36"]),
 ]
 
 
