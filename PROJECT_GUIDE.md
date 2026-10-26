@@ -5,7 +5,7 @@
 I build ML and AI systems end to end — from computer vision models and agentic AI workflows to production SDKs and data pipelines. My work spans machine learning, reinforcement learning, NLP, deep learning, causal inference, and data engineering.
 
 **Currently:**
-- 🏢 Data Science Intern (Computer Vision) at **SAS**, building instance segmentation and object detection models for worker-safety pipelines (previously Applied AI Engineering and Interactive Analytics & Modeling at SAS)
+- Data Science Intern (Computer Vision) at **SAS**, building instance segmentation and object detection models for worker-safety pipelines (previously Applied AI Engineering and Interactive Analytics & Modeling at SAS)
 - Duke capstone with **Bank of New York**, developing agentic AI workflows for corporate action intelligence
 - Researcher at **Duke AI Trust Lab**, studying deception and misalignment in multi-agent AI systems
 
