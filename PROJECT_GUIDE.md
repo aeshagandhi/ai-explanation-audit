@@ -6,14 +6,14 @@ I build ML and AI systems end to end — from computer vision models and agentic
 
 **Currently:**
 - 🏢 Data Science Intern (Computer Vision) at **SAS**, building instance segmentation and object detection models for worker-safety pipelines (previously Applied AI Engineering and Interactive Analytics & Modeling at SAS)
-- 🏦 Duke capstone with **Bank of New York**, developing agentic AI workflows for corporate action intelligence
-- 🔬 Researcher at **Duke AI Trust Lab**, studying deception and misalignment in multi-agent AI systems
+- Duke capstone with **Bank of New York**, developing agentic AI workflows for corporate action intelligence
+- Researcher at **Duke AI Trust Lab**, studying deception and misalignment in multi-agent AI systems
 
-📍 Durham, NC &nbsp;|&nbsp; 🎓 Duke University & UC Berkeley &nbsp;|&nbsp; [LinkedIn](https://linkedin.com/in/aeshagandhi) | [Resume](Aesha_Gandhi_Resume.pdf)
+Durham, NC &nbsp;|&nbsp; Duke University & UC Berkeley &nbsp;|&nbsp; [LinkedIn](https://linkedin.com/in/aeshagandhi) | [Resume](Aesha_Gandhi_Resume.pdf)
 
 ---
 
-## ⭐ Featured Projects
+## Featured Projects
 
 | Project | Description | Stack |
 |---|---|---|
@@ -28,7 +28,7 @@ I build ML and AI systems end to end — from computer vision models and agentic
 
 ---
 
-## 📚 Coursework & Mini Projects
+## Coursework & Mini Projects
 
 Assignments and smaller projects from my Duke and Berkeley courses.
 
